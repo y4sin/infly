@@ -1,0 +1,417 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFLY</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://kit.fontawesome.com/a4e79bafb4.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'Infly/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'Infly/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'Infly/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="Infly/favicon/site.webmanifest">
+    <link rel="mask-icon" href="Infly/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="{% static 'script.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'cwl/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'cwl/owl.theme.default.min.css' %}">
+</head>
+<body>
+    <header class="header container">
+        <div>
+            <img class="inf" src="{% static 'Infly/Home/02 1.png' %}" alt="">
+        </div>
+        <div class="hd-nav">
+            <nav>
+                <ul class="navbar flex">
+                    <li><a href="#">Home</a></li>
+                    <div class="products" id="products">
+                        <ul class="smalllist">
+                            <li><a href="#">Digital Influence</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Softwares</a></li>
+                        </ul>
+                    </div>
+                    <li class="avg" ><a onclick="hideProducts(event)" class="svg1" id="svg1" href="#">Products<svg class="drop" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="dropicon" d="M8.64474 0.109497H4.49141H0.751408C0.111408 0.109497 -0.208592 0.882831 0.244741 1.33616L3.69807 4.7895C4.25141 5.34283 5.15141 5.34283 5.70474 4.7895L7.01807 3.47616L9.15807 1.33616C9.60474 0.882831 9.28474 0.109497 8.64474 0.109497Z" fill="#F5F7F7"/>
+                        </svg>
+                        </a>
+                    <li><a href="#">International Customer</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </div>
+        <!-- <div>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <span class="button_badge">1</span>
+        </div> -->
+        <nav class="mobilenav bar1" id="mob">
+            <i class="fa-solid fa-bars"></i>
+        </nav>
+    </header>
+    <section id="spotlight" class="container">
+        <div class="mobilediv" id="mbdiv">
+            <div class="mobilelistcontent">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#productssec">Products</a></li>
+                    <li><a href="#abt">About</a></li>
+                    <li><a href="#c-s">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="matter">
+            <div class="spt1">
+                <h5 class="spthead1">Become an</h5>
+                <h1 class="spthead2"><span class="spthead2s"></span>INFLUNCER</h1>
+                <P class="sptp">Exclusive reels/short bundles!</P>
+            </div>
+            <div>
+                <button class="offrbtn">
+                    <i class="buy">Buy all @ ₹ 1999/-</i>
+                </button>
+            </div>
+        </div>
+        <div class="sidepic">
+            <img class="whiteimg" src="{% static 'Infly/Home/Vector 5.png' %}" alt="">
+        </div>
+        <div>
+            <img class="phoneimg" src="{% static 'Infly/Home/spotIllustration_01 1.png' %}" alt="">
+        </div>
+        <div class="sec2div">
+            <div class="box1">
+                <div class="digital">
+                    <h1 class="digi">Digital influence</h1>
+                    <img class="arwrightup" src="{% static 'Infly/right-up.png' %}" alt="">
+                </div>
+                <div class="inf1">
+                    <img class="inf1img" src="{% static 'Infly/Home/categories-1 1.png' %}" alt="">
+                </div>
+            </div>
+            <div class="box2">
+                <div class="digital">
+                    <h1 class="digi">Course</h1>
+                    <img class="arwrightup" src="{% static 'Infly/right-up.png' %}" alt="">
+                </div>
+                <div class="inf2">
+                    <img class="inf1img" src="{% static 'Infly/Home/categories-2 1.png' %}" alt="">
+                </div>
+            </div>
+            <div class="box3">
+                <div class="digital">
+                    <h1 class="digi">Softwares</h1>
+                    <img class="arwrightup" src="{% static 'Infly/right-up.png' %}" alt="">
+                </div>
+                <div class="inf3">
+                    <img class="inf1img" src="{% static 'Infly/Home/categories-3 1.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="arrwdown">
+            <img src="{% static 'Infly/down-arrow.png' %}" alt="" height="30px">
+        </div>
+        <div class="purchase-details" id="hiddenbox">
+            <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="smallcontainer">
+                <div class="inboximg">
+                    <img src="{% static 'Infly/1675d4_821ad9a45e2e403c9ef77e0a3ca34728~mv2.jpg.png' %}" alt="">
+                </div>
+                <div class="smallimg1">
+                    <div class="smallimg">
+                        <img src="{% static 'Infly/1675d4_821ad9a45e2e403c9ef77e0a3ca34728~mv2.jpg.png' %}" alt="">
+                        <img src="{% static 'Infly/1675d4_821ad9a45e2e403c9ef77e0a3ca34728~mv2.jpg.png' %}" alt="">
+                        <img src="{% static 'Infly/1675d4_821ad9a45e2e403c9ef77e0a3ca34728~mv2.jpg.png' %}" alt="">
+                        <img src="{% static 'Infly/1675d4_821ad9a45e2e403c9ef77e0a3ca34728~mv2.jpg.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="prdctdetails">
+                    <p class="inboxhead">1500+ Ready To Use Viral Reels Bundle</p>
+                    <span><span>&#8377</span>95.00</span>
+                </div>
+                <div class="rating">
+                    <img src="{% static 'Infly/Vector.png' %}" alt=""><img src="{% static 'Infly/Vector.png' %}" alt=""><img src="{% static 'Infly/Vector.png' %}" alt=""><img src="{% static 'Infly/Vector.png' %}" alt=""><img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <span>116 Reviews</span>
+                </div>
+                <button class="buynow">Buy Now</button>
+                <div class="description">
+                    <h3>Description</h3>
+                    <p>
+                        Get 1500+ Viral Motivational Ready-Made Reel Videos Save Your Time & Boost Your Social Media
+                        Are you Struggling to find Motivational Reels on Instagram without Watermark and Logo? We have a Solution for that, Get 1500+ Ready-Made Reel Videos .
+                    </p>
+                </div>
+                <div class="Fileinc">
+                    <h3>File Includes</h3>
+                    <ul>
+                        <li>1500+ Reels Ready To Use Without Watermark & Logo.</li>
+                        <li>Ultimate Canva Keyword Guide</li>
+                        <li>90+ Powerful Set Of Hashtags.</li>
+                    </ul>
+                </div>
+                <div class="howit">
+                    <h3>How It Will Be Delivered</h3>
+                    <ul>
+                        <li>Once you place order.</li>
+                        <li>Check your mail you will also receive thank you for shopping with product details.</li>
+                        <li>There will download button click & download PDF from there.</li>
+                        <li>Once you download PDF click on the template link (find template link on PDF) from the PDF you will be taken to Google Drive.</li>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+    </section>
+    <section id="secc" class="container">
+        <div class="collection">
+            <h1>Explore digital collection</h1>
+        </div>
+        <div class="packdiv flex">
+            {% for item in items %}
+            <div>
+                <a href="#"><img class="packimg itempic item1 boxshadow"
+                        src="{{ item.image.url}}" alt=""></a>
+                <a href="#"><img class="dwnldicon1" src="./Infly/Digital Product.png" alt=""></a>
+                <div>
+                    <p class="packp">{{ item.name}}</p>
+                    <span class="packmoney">₹{{ item.price }}</span>
+                </div>
+            </div>
+            {% endfor %}
+            {% comment %} <div>
+                <a href="#"><img class="packimg boxshadow itempic item1"
+                        src="{% static 'Infly/1675d4_821ad9a45e2e403c9ef77e0a3ca34728~mv2.jpg.png' %}" alt=""></a>
+                <a href="#"><img class="dwnldicon2" src="./Infly/Digital Product.png" alt=""></a>
+                <div>
+                    <p class="packp">700+GB Ultimate Graphic Designing Pack.</p>
+                    <span class="packmoney">₹95.00</span>
+                </div>
+            </div>
+            <div>
+                <a href="#"><img class="packimg boxshadow itempic item1"
+                        src="{% static 'Infly/1675d4_821ad9a45e2e403c9ef77e0a3ca34728~mv2.jpg.png' %}" alt=""></a>
+                <a href="#"><img class="dwnldicon3" src="./Infly/Digital Product.png" alt=""></a>
+                <div>
+                    <p class="packp">700+GB Ultimate Graphic Designing Pack.</p>
+                    <span class="packmoney">₹<span>95.00</span>
+                </div>
+            </div>
+            <div class="pck4">
+                <a href="#"><img class="packimg boxshadow itempic item1"
+                        src="{% static 'Infly/1675d4_821ad9a45e2e403c9ef77e0a3ca34728~mv2.jpg.png' %}" alt=""> </a>
+                <a href="#"><img class="dwnldicon4" src="./Infly/Digital Product.png" alt=""></a>
+                <div>
+                    <p class="packp">700+GB Ultimate Graphic Designing Pack.</p>
+                    <span class="packmoney">₹95.00</span>
+                </div>
+            </div> {% endcomment %}
+        </div>
+        <div class="explorediv">
+            <button class="explorebtn">
+                <p class="explore">Explore More </p>
+            </button>
+        </div>
+    </section>
+    <div class="customer-sec">
+        <div class="hear-div">
+            <h1 class="hear-h container">Hear From Our satisfied Customer</h1>
+        </div>
+    </div>
+    <div id="popup" class="shareyourexp">
+        <div class="expcontent">
+            <h3 class="kim">Share Your Experience</h3>
+            <div class="expstars flex-box">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="{% static 'http://www.w3.org/2000/svg' %}">
+                    <path d="M16.3065 2.68002L18.6532 7.37335C18.9732 8.02669 19.8265 8.65335 20.5465 8.77335L24.7999 9.48002C27.5199 9.93335 28.1599 11.9067 26.1999 13.8534L22.8932 17.16C22.3332 17.72 22.0265 18.8 22.1999 19.5734L23.1465 23.6667C23.8932 26.9067 22.1732 28.16 19.3065 26.4667L15.3199 24.1067C14.5999 23.68 13.4132 23.68 12.6799 24.1067L8.69321 26.4667C5.83988 28.16 4.10655 26.8934 4.85321 23.6667L5.79988 19.5734C5.97321 18.8 5.66655 17.72 5.10655 17.16L1.79988 13.8534C-0.146788 11.9067 0.479879 9.93335 3.19988 9.48002L7.45321 8.77335C8.15988 8.65335 9.01321 8.02669 9.33321 7.37335L11.6799 2.68002C12.9599 0.133353 15.0399 0.133353 16.3065 2.68002Z" fill="#5E17EB"/>
+                    </svg>
+                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.3065 2.68002L18.6532 7.37335C18.9732 8.02669 19.8265 8.65335 20.5465 8.77335L24.7999 9.48002C27.5199 9.93335 28.1599 11.9067 26.1999 13.8534L22.8932 17.16C22.3332 17.72 22.0265 18.8 22.1999 19.5734L23.1465 23.6667C23.8932 26.9067 22.1732 28.16 19.3065 26.4667L15.3199 24.1067C14.5999 23.68 13.4132 23.68 12.6799 24.1067L8.69321 26.4667C5.83988 28.16 4.10655 26.8934 4.85321 23.6667L5.79988 19.5734C5.97321 18.8 5.66655 17.72 5.10655 17.16L1.79988 13.8534C-0.146788 11.9067 0.479879 9.93335 3.19988 9.48002L7.45321 8.77335C8.15988 8.65335 9.01321 8.02669 9.33321 7.37335L11.6799 2.68002C12.9599 0.133353 15.0399 0.133353 16.3065 2.68002Z" fill="#5E17EB"/>
+                        </svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.3065 2.68002L18.6532 7.37335C18.9732 8.02669 19.8265 8.65335 20.5465 8.77335L24.7999 9.48002C27.5199 9.93335 28.1599 11.9067 26.1999 13.8534L22.8932 17.16C22.3332 17.72 22.0265 18.8 22.1999 19.5734L23.1465 23.6667C23.8932 26.9067 22.1732 28.16 19.3065 26.4667L15.3199 24.1067C14.5999 23.68 13.4132 23.68 12.6799 24.1067L8.69321 26.4667C5.83988 28.16 4.10655 26.8934 4.85321 23.6667L5.79988 19.5734C5.97321 18.8 5.66655 17.72 5.10655 17.16L1.79988 13.8534C-0.146788 11.9067 0.479879 9.93335 3.19988 9.48002L7.45321 8.77335C8.15988 8.65335 9.01321 8.02669 9.33321 7.37335L11.6799 2.68002C12.9599 0.133353 15.0399 0.133353 16.3065 2.68002Z" fill="#5E17EB"/>
+                            </svg> 
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.3065 2.68002L18.6532 7.37335C18.9732 8.02669 19.8265 8.65335 20.5465 8.77335L24.7999 9.48002C27.5199 9.93335 28.1599 11.9067 26.1999 13.8534L22.8932 17.16C22.3332 17.72 22.0265 18.8 22.1999 19.5734L23.1465 23.6667C23.8932 26.9067 22.1732 28.16 19.3065 26.4667L15.3199 24.1067C14.5999 23.68 13.4132 23.68 12.6799 24.1067L8.69321 26.4667C5.83988 28.16 4.10655 26.8934 4.85321 23.6667L5.79988 19.5734C5.97321 18.8 5.66655 17.72 5.10655 17.16L1.79988 13.8534C-0.146788 11.9067 0.479879 9.93335 3.19988 9.48002L7.45321 8.77335C8.15988 8.65335 9.01321 8.02669 9.33321 7.37335L11.6799 2.68002C12.9599 0.133353 15.0399 0.133353 16.3065 2.68002Z" fill="#5E17EB"/>
+                                </svg>
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.3065 2.68002L18.6532 7.37335C18.9732 8.02669 19.8265 8.65335 20.5465 8.77335L24.7999 9.48002C27.5199 9.93335 28.1599 11.9067 26.1999 13.8534L22.8932 17.16C22.3332 17.72 22.0265 18.8 22.1999 19.5734L23.1465 23.6667C23.8932 26.9067 22.1732 28.16 19.3065 26.4667L15.3199 24.1067C14.5999 23.68 13.4132 23.68 12.6799 24.1067L8.69321 26.4667C5.83988 28.16 4.10655 26.8934 4.85321 23.6667L5.79988 19.5734C5.97321 18.8 5.66655 17.72 5.10655 17.16L1.79988 13.8534C-0.146788 11.9067 0.479879 9.93335 3.19988 9.48002L7.45321 8.77335C8.15988 8.65335 9.01321 8.02669 9.33321 7.37335L11.6799 2.68002C12.9599 0.133353 15.0399 0.133353 16.3065 2.68002Z" fill="#5E17EB"/>
+                                    </svg>
+                                
+            </div>
+            <p class="kim">Name</p>
+            <input type="name">
+            <p class="kim">Do you have any thoughts you'd like to share?</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="expbuttons flex-box flex">
+                <button onclick="closeExp()">Cancel</button>
+                <button>Post</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="expfull flex" style="position: relative; padding: 0.5rem 3rem;">
+        <div class="exp" id="feedbackbtn">
+            <a href="#" class="exp-p">Share Your Experience</a>
+        </div>
+      
+        <div class="owl-carousel" style="position: relative;"> 
+            
+            <div class="expdiv">
+                <div class="stars">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                </div>
+                <div>
+                    <p class="exp-w">"As someone who is not very design-savvy, I was hesitant to try creating my own
+                        graphics. But with the help of these templates, I was able to create professional-looking designs in
+                        minutes. Thank you!"</p>
+                    <h4 class="cus-name">- John R</h4>
+                </div>
+            </div>
+            <div class="expdiv">
+                <div class="stars">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector half.png' %}" alt="">
+                </div>
+                <div>
+                    <p class="exp-w">"I've been using these templates for a few months now, and I can't imagine going back
+                        to creating everything from scratch. The quality is top-notch, and the variety of options means I
+                        can always find something that fits my needs."</p>
+                    <h4 class="cus-name">- David T</h4>
+                </div>
+                <!-- <div class="coma">
+                    <img src="./Infly/coma.png" alt="">
+                    <img src="./Infly/coma.png" alt="">
+                </div> -->
+            </div>
+            <div class="expdiv">
+                <div class="stars">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector.png' %}" alt="">
+                    <img src="{% static 'Infly/Vector half.png' %}" alt="">
+                </div>
+                <div>
+                    <p class="exp-w">"I love how easy it is to customize these templates to fit my brand's aesthetic. The
+                        illustrations and graphics are beautiful, and the Photoshop templates are a dream to work with. I
+                        highly recommend to anyone looking to up their design game!"</p>
+                    <h4 class="cus-name">- Amanda K</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shopdiv">
+        <button class="shopbtn">
+            <p class="shoplore">Shop Now</p>
+        </button>
+    </div>
+    <div class="aboutdivm container">
+        <div class="aboutdiv">
+            <div>
+                <h3 class="abouth">About Us</h3>
+            </div>
+            <div class="aboutp">
+                <p class="aboutp1"> A brand & digital products agency for ambitious businesses & life.</p>
+                <p class="ab-p">Crafting engaging content for social media can be a daunting task, but don't worry, we're here to
+                    help. Our team has been working hard to produce eye-catching infographics that are already formatted
+                    and ready for you to post on your social media channels. With our content at your fingertips, you'll
+                    have more time to focus on growing your business and less time worrying about what to post next.
+                    At our core, we're dedicated to creating products that are not only of the highest quality, but also
+                    sustainable. That's why we're excited to announce the launch of our online store, where you can find
+                    a wide range of environmentally conscious products. We're thrilled that you've found us and we hope
+                    that you'll love our products just as much as we do.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="mobilerate" >
+        <div class="exprate">
+            <h3 class="share-exp">Share Your Experience with us</h3>
+            <a href="javascript:void(0)" id="rate">Rate</a>
+        </div>
+    </div>
+    <div class="emaildiv">
+        <div class="loop">
+            <h2 class="looph">Stay in the Loop with Our New Arrivals and <br> Unbeatable Offers</h2>
+        </div>
+        <div class="subse">
+            <input class="emailsec" type="text" placeholder="Enter your email here">
+            <button class="emailbtn">
+                <p>Subscribe Now</p>
+            </button>
+        </div>
+    </div>
+    <footer id="ft-sec">
+        <div>
+            <div>
+                <h2 class="ft-infly"><i>INFLY</i></h2>
+            </div>
+            <div class="ft-1 flex">
+                <div class="homeft">
+                    <nav>
+                        <ul class="ft-ul1">
+                            <li><a href="">HOME</a></li>
+                            <li><a href="">ABOUT</a></li>
+                            <li><a href="">CONTACT</a></li>
+                            <li><a href="">FAQ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <nav>
+                        <ul class="ft-ul2">
+                            <li><a href="">TERMS AND CONDITIONS</a></li>
+                            <li><a href="">PRIVACY POLICY</a></li>
+                            <li><a href="">REFUND & RETURN POLICY</a></li>
+                            <li><a href="">SHIPPING AND DEVLIVERY</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="fllw-div">
+            <h3 class="ft-fllwus">FOLLOW US ON </h3>
+            <div class="last-icon flex">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="{% static 'cwl/owl.carousel.min.js' %}"></script>
+    <script>
+       $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            items:3,
+            dots:true,
+            responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        600:{
+            items:2,
+        },
+        1000:{
+            items:3,
+        }
+         }
+        });
+        });
+    </script>
+</body>
+</html>
